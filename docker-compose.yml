@@ -1,0 +1,11 @@
+couchpotato_data:
+  image: ubuntu:14.04
+  volumes:
+    - /data
+
+couchpotato:
+  build: couchpotato/
+  volumes_from:
+    - couchpotato_data
+  ports:
+    - 5050
